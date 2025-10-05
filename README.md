@@ -4,7 +4,7 @@
 
 <details>
 
-<summary>*Задание*</summary>
+## <summary>Задание</summary>
 
 Содержание
 ==========
