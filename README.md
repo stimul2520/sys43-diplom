@@ -185,3 +185,5 @@ sudo nano ...tf
 
 - [main.tf](/home/diploma1/sys43-diplom/terraform/main.tf), в котором описывается создание 2 ВМ с nginx.
 - [target.tf](/home/diploma1/sys43-diplom/terraform/target.tf), создание целевых групп.
+- [backend.tf](/home/diploma1/sys43-diplom/terraform/backend.tf), группы бэкендов.
+
