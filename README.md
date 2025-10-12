@@ -180,7 +180,7 @@ sudo nano ansible.cfg
 Создаются:
 
 ```python
-sudo nano main.tf
+sudo nano ...tf
 ```
 
 - [main.tf](/home/diploma1/sys43-diplom/terraform/main.tf), в котором описывается создание 2 ВМ с nginx.
