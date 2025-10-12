@@ -183,7 +183,7 @@ sudo nano ansible.cfg
 sudo nano ...tf
 ```
 
-- [main.tf](/home/diploma1/sys43-diplom/terraform/main.tf), в котором описывается создание 2 ВМ с nginx.
-- [target.tf](/home/diploma1/sys43-diplom/terraform/target.tf), создание целевых групп.
+- [main.tf](https://github.com/stimul2520/sys43-diplom/blob/9864edf12f7a3734e85353e614e2acf33bf99433/terraform/main.tf), в котором описывается создание 2 ВМ с nginx.
+- [target.tf](https://github.com/stimul2520/sys43-diplom/blob/9864edf12f7a3734e85353e614e2acf33bf99433/terraform/target.tf), создание целевых групп.
 - [backend.tf](https://github.com/stimul2520/sys43-diplom/blob/a5b983ed773ac9de613d0397b32cf99272b61b19/terraform/backend.tf), группы бэкендов.
 
