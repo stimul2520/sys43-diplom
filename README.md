@@ -173,5 +173,20 @@ sudo nano ansible.cfg
 
 ---------
 
+## II. Развёртывание инфраструктуры с помощью TERRAFORM.
 
+### Сайт. Серверы Nginx.
 
+Создаются:
+
+- `main.tf`, в котором описывается создание 2 ВМ с nginx.
+```python
+sudo nano main.tf
+```
+[main.tf](/home/diploma1/sys43-diplom/terraform/main.tf)
+
+- `target.tf`, создание целевых групп
+```python
+sudo nano target.tf    
+```
+[target.tf](/home/diploma1/sys43-diplom/terraform/target.tf)
