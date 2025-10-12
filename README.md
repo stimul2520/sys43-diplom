@@ -115,3 +115,66 @@ Cоздайте ВМ, разверните на ней Elasticsearch. Устан
 3. Ожидание моментального ответа на свой вопрос. Дипломные руководители — работающие инженеры, которые занимаются, кроме преподавания, своими проектами. Их время ограничено, поэтому постарайтесь задавать правильные вопросы, чтобы получать быстрые ответы :)
 
 </details>
+
+
+## I. Подготовка и установка TERRAFORM, ANSIBLE.
+
+---------
+
+# a) TERRAFORM
+
+```python
+wget https://hashicorp-releases.yandexcloud.net/terraform/1.14.0-alpha20250911/terraform_1.14.0-alpha20250911_linux_amd64.zip 
+wget https://hashicorp-releases.yandexcloud.net/terraform/1.14.0-alpha20250911/terraform_1.14.0-alpha20250911_SHA256SUMS
+sha256sum -c --ignore-missing terraform_1.14.0-alpha20250911_SHA256SUMS
+sudo unzip terraform_1.14.0-alpha20250911_linux_amd64.zip -d /usr/local/bin
+terraform version
+```
+![1](img/1.png)
+
+```python
+nano ~/.terraformrc
+```
+![2](img/2.png)
+
+```python
+ssh-keygen -t ed25519
+cat ~/.ssh/id_ed25519.pub
+```
+ 
+```python
+nano ~/meta.yaml
+```
+![3](img/3.png)
+
+Создание `playbook Terraform` с провайдером.
+```python
+nano ~/providers.tf
+```
+![4](img/4.png)
+
+```python
+terraform init
+```
+![5](img/5.png)
+
+# b) ANSIBLE
+
+```python
+mkdir .ansible/
+cd .ansible/
+sudo apt install ansible
+ansible --version
+```
+![6](img/6.png)
+
+Создание `ansible.cfg` 
+```python
+sudo nano ansible.cfg
+```
+![7](img/7.png)
+
+---------
+
+
+
