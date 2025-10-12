@@ -117,11 +117,9 @@ Cоздайте ВМ, разверните на ней Elasticsearch. Устан
 </details>
 
 
-## I. Подготовка и установка TERRAFORM, ANSIBLE.
+# I. Подготовка и установка TERRAFORM, ANSIBLE.
 
----------
-
-# a) TERRAFORM
+## a) TERRAFORM
 
 ```python
 wget https://hashicorp-releases.yandexcloud.net/terraform/1.14.0-alpha20250911/terraform_1.14.0-alpha20250911_linux_amd64.zip 
@@ -158,7 +156,7 @@ terraform init
 ```
 ![5](img/5.png)
 
-# b) ANSIBLE
+## b) ANSIBLE
 
 ```python
 mkdir .ansible/
