@@ -245,7 +245,7 @@ terraform apply
 
 ## IV. Настройки для развёртывания инфраструктуры с помощью ANSIBLE.
 
-Создание и настройка [hosts](/home/diploma1/sys43-diplom/ansible/hosts), [ansible.cfg](https://github.com/stimul2520/sys43-diplom/blob/8c291abcbf88bf50f157887d514af1c6d74a5a6b/ansible/ansible.cfg).
+Создание и настройка [hosts](https://github.com/stimul2520/sys43-diplom/blob/18ed5aea0366f84a3538636637f92b8d08c40173/ansible/hosts), [ansible.cfg](https://github.com/stimul2520/sys43-diplom/blob/18ed5aea0366f84a3538636637f92b8d08c40173/ansible/ansible.cfg).
 
 ```python
 cd .ansible/
