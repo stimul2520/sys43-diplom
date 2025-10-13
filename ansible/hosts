@@ -1,9 +1,9 @@
 [nginx-web]
-nginx-1 ansible_ssh_user=diploma1 ansible_sudo_pass=diploma1
-nginx-2 ansible_ssh_user=diploma1 ansible_sudo_pass=diploma1
+nginx-1 ansible_ssh_user=diploma1 ansible_sudo_pass=***
+nginx-2 ansible_ssh_user=diploma1 ansible_sudo_pass=***
 
 [zabbix]
-zabbix ansible_ssh_user=diploma1 ansible_sudo_pass=diploma1  
+zabbix ansible_ssh_user=diploma1 ansible_sudo_pass=***  
 
 [elasticsearch]
 elasticsearch

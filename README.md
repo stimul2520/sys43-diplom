@@ -245,7 +245,7 @@ terraform apply
 
 ## IV. Настройки для развёртывания инфраструктуры с помощью ANSIBLE.
 
-Создание и настройка [hosts](/home/diploma1/sys43-diplom/ansible/hosts), [ansible.cfg](/home/diploma1/sys43-diplom/ansible/ansible.cfg).
+Создание и настройка [hosts](/home/diploma1/sys43-diplom/ansible/hosts), [ansible.cfg](https://github.com/stimul2520/sys43-diplom/blob/8c291abcbf88bf50f157887d514af1c6d74a5a6b/ansible/ansible.cfg).
 
 ```python
 cd .ansible/
@@ -264,35 +264,35 @@ ansible all -m ping
 
 Создание, запуск ansible-playbooks и сопутствующих конфиг файлов.
 
-- Nginx.
-[ngx1.html](/home/diploma1/sys43-diplom/ansible/ngx1.html)
-[ngx2.html](/home/diploma1/sys43-diplom/ansible/ngx2.html)
-[nginx-playbook.yaml](/home/diploma1/sys43-diplom/ansible/nginx-playbook.yaml)
+1. Nginx.
+- [ngx1.html](https://github.com/stimul2520/sys43-diplom/blob/8c291abcbf88bf50f157887d514af1c6d74a5a6b/ansible/ngx1.html)
+- [ngx2.html](https://github.com/stimul2520/sys43-diplom/blob/8c291abcbf88bf50f157887d514af1c6d74a5a6b/ansible/ngx2.html)
+- [nginx-playbook.yaml](https://github.com/stimul2520/sys43-diplom/blob/8c291abcbf88bf50f157887d514af1c6d74a5a6b/ansible/nginx-playbook.yaml)
 
 ![19](img/19.png)
 ![20](img/20.png)
 
-- Elasticsearch (https://mirror.yandex.ru/mirrors/elastic/7/pool/main/e/elasticsearch/elasticsearch-7.17.1-amd64.deb)
-[elastic-conf.yaml](/home/diploma1/sys43-diplom/ansible/elastic-conf.yaml)
-[elastic-play.yaml](/home/diploma1/sys43-diplom/ansible/elastic-play.yaml)
+2. Elasticsearch (https://mirror.yandex.ru/mirrors/elastic/7/pool/main/e/elasticsearch/elasticsearch-7.17.1-amd64.deb)
+- [elastic-conf.yaml](https://github.com/stimul2520/sys43-diplom/blob/8c291abcbf88bf50f157887d514af1c6d74a5a6b/ansible/elastic-conf.yaml)
+- [elastic-play.yaml](https://github.com/stimul2520/sys43-diplom/blob/8c291abcbf88bf50f157887d514af1c6d74a5a6b/ansible/elastic-play.yaml)
 
 ![21](img/21.png)
 
-- Kibana (https://mirror.yandex.ru/mirrors/elastic/7/pool/main/k/kibana/kibana-7.17.1-amd64.deb)
-[kibana.j2](/home/diploma1/sys43-diplom/ansible/kibana.j2)
-[kibana-play.yaml](/home/diploma1/sys43-diplom/ansible/kibana-play.yaml)
+3. Kibana (https://mirror.yandex.ru/mirrors/elastic/7/pool/main/k/kibana/kibana-7.17.1-amd64.deb)
+- [kibana.j2](https://github.com/stimul2520/sys43-diplom/blob/8c291abcbf88bf50f157887d514af1c6d74a5a6b/ansible/kibana.j2)
+- [kibana-play.yaml](https://github.com/stimul2520/sys43-diplom/blob/8c291abcbf88bf50f157887d514af1c6d74a5a6b/ansible/kibana-play.yaml)
 
 ![22](img/22.png)
 
-- Filebeat (https://mirror.yandex.ru/mirrors/elastic/7/pool/main/f/filebeat/filebeat-7.17.1-amd64.deb)
-[filebeat.j2](/home/diploma1/sys43-diplom/ansible/filebeat.j2)
-[filebeat-play.yaml](/home/diploma1/sys43-diplom/ansible/filebeat-play.yaml)
+4. Filebeat (https://mirror.yandex.ru/mirrors/elastic/7/pool/main/f/filebeat/filebeat-7.17.1-amd64.deb)
+- [filebeat.j2](https://github.com/stimul2520/sys43-diplom/blob/8c291abcbf88bf50f157887d514af1c6d74a5a6b/ansible/filebeat.j2)
+- [filebeat-play.yaml](https://github.com/stimul2520/sys43-diplom/blob/8c291abcbf88bf50f157887d514af1c6d74a5a6b/ansible/filebeat-play.yaml)
 
 ![23](img/23.png)
 
-- Zabbix. Zabbix-agent.
-[zabbix-playbook.yaml](/home/diploma1/sys43-diplom/ansible/zabbix-playbook.yaml)
-[zabbix-agent-playbook.yaml](/home/diploma1/sys43-diplom/ansible/zabbix-agent-playbook.yaml)
+5. Zabbix. Zabbix-agent.
+- [zabbix-playbook.yaml](https://github.com/stimul2520/sys43-diplom/blob/8c291abcbf88bf50f157887d514af1c6d74a5a6b/ansible/zabbix-playbook.yaml)
+- [zabbix-agent-playbook.yaml](https://github.com/stimul2520/sys43-diplom/blob/8c291abcbf88bf50f157887d514af1c6d74a5a6b/ansible/zabbix-agent-playbook.yaml)
 
 ![24](img/24.png)
 ![25](img/25.png)
