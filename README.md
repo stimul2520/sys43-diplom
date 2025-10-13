@@ -183,9 +183,9 @@ sudo nano ansible.cfg
 sudo nano ...tf
 ```
 
-- [main.tf](https://github.com/stimul2520/sys43-diplom/blob/9864edf12f7a3734e85353e614e2acf33bf99433/terraform/main.tf), в котором описывается создание 2 ВМ с nginx.
-- [target.tf](https://github.com/stimul2520/sys43-diplom/blob/9864edf12f7a3734e85353e614e2acf33bf99433/terraform/target.tf), создание целевых групп.
-- [backend.tf](https://github.com/stimul2520/sys43-diplom/blob/a5b983ed773ac9de613d0397b32cf99272b61b19/terraform/backend.tf), группы бэкендов.
+- [main.tf](https://github.com/stimul2520/sys43-diplom/blob/d6028295258290d8e62d48ff6c6203ad85766dec/terraform/main.tf), в котором описывается создание 2 ВМ с nginx.
+- [target.tf](https://github.com/stimul2520/sys43-diplom/blob/d6028295258290d8e62d48ff6c6203ad85766dec/terraform/target.tf), создание целевых групп.
+- [backend.tf](https://github.com/stimul2520/sys43-diplom/blob/d6028295258290d8e62d48ff6c6203ad85766dec/terraform/backend.tf), группы бэкендов.
 - [router.tf](https://github.com/stimul2520/sys43-diplom/blob/c7c91766226b32fe9b269c78dc0fadeb7ebe8bbd/terraform/router.tf), HTTP роутер.
 - [balancer.tf](https://github.com/stimul2520/sys43-diplom/blob/c7c91766226b32fe9b269c78dc0fadeb7ebe8bbd/terraform/balancer.tf), Application Load Balancer.
 
