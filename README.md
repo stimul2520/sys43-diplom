@@ -284,7 +284,7 @@ ansible all -m ping
 
 ![22](img/22.png)
 
-4. Filebeat (https://mirror.yandex.ru/mirrors/elastic/7/pool/main/f/filebeat/filebeat-7.17.1-amd64.deb)
+4. Filebeat с настройкой на отправку access.log, error.log nginx в Elasticsearch (https://mirror.yandex.ru/mirrors/elastic/7/pool/main/f/filebeat/filebeat-7.17.1-amd64.deb)
 - [filebeat.j2](https://github.com/stimul2520/sys43-diplom/blob/8c291abcbf88bf50f157887d514af1c6d74a5a6b/ansible/filebeat.j2)
 - [filebeat-play.yaml](https://github.com/stimul2520/sys43-diplom/blob/8c291abcbf88bf50f157887d514af1c6d74a5a6b/ansible/filebeat-play.yaml)
 
@@ -355,3 +355,25 @@ pass: zabbix
 ![45](img/45.png)
 
 ### с) Логи. Elasticsearch, Kibana, Filebeat. 
+
+Запуск Kibana:
+
+```python
+http://89.169.141.42:5601
+```
+![46](img/46.png)
+
+Создание Index pattern:
+
+![47](img/47.png)
+![48](img/48.png)
+
+Проверка отправки логов:
+
+![49](img/49.png)
+
+### d) Резервное копирование.
+
+![50](img/50.png)
+
+---------
