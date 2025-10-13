@@ -1,0 +1,37 @@
+---
+
+- name: install zabbix-agent
+  hosts: all
+  become: true
+
+  tasks:
+  - name: apt update
+    apt:
+      upgrade: yes
+      update_cache: yes
+
+  - name: download zabbix-agent
+    get_url:
+      url: https://repo.zabbix.com/zabbix/7.4/release/ubuntu/pool/main/z/zabbix-release/zabbix-release_latest_7.4+ubuntu24.04_all.deb
+      dest: /tmp/zabbix-release_latest_7.4+ubuntu24.04_all.deb
+
+  - name: dpkg -i zabbix-agent
+    apt:
+      deb: /tmp/zabbix-release_latest_7.4+ubuntu24.04_all.deb
+
+  - name: apt update
+    apt:
+      update_cache: yes
+
+  - name: apt install zabbix-agent
+    apt:
+      name: zabbix-agent
+
+  - name: ip replacement in zabbix_agentd.conf
+    shell: |
+      sed -i 's/Server=127.0.0.1/Server=192.168.40.20/g' /etc/zabbix/zabbix_agentd.conf
+
+  - name: restart and enable zabbix-agent
+    shell: |
+      systemctl restart zabbix-agent
+      systemctl enable zabbix-agent

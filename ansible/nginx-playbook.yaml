@@ -1,0 +1,50 @@
+---
+- name: test
+  hosts: nginx-web
+  become: yes
+
+  tasks:
+    - name: update пакетов
+      apt:
+        force_apt_get: true
+        upgrade: dist
+        update_cache: yes
+      become: true
+
+    - name: install nginx
+      apt: 
+        name: nginx
+        state: latest
+        update_cache: yes
+
+- name:  copy ngx1.html на первый сервер
+  hosts: nginx-1
+  become: yes
+
+  tasks:
+    - name: copy index_new.html
+      ansible.builtin.copy:
+        src: /home/diploma1/.ansible/ngx1.html
+        dest: /var/www/html/index.html
+        owner: root
+        group: sudo
+        mode: "0644"
+
+- name:  copy ngx2.html на второй сервер
+  hosts: nginx-2
+  become: yes
+  
+  tasks:
+    - name: copy index_new.html
+      ansible.builtin.copy:
+        src: /home/diploma1/.ansible/ngx2.html
+        dest: /var/www/html/index.html
+        owner: root
+        group: sudo
+        mode: "0644"
+
+  handlers:
+    - name: reload nginx
+      systemd:
+        name: nginx
+        state: reloaded

@@ -1,0 +1,24 @@
+[nginx-web]
+nginx-1 ansible_ssh_user=diploma1 ansible_sudo_pass=diploma1
+nginx-2 ansible_ssh_user=diploma1 ansible_sudo_pass=diploma1
+
+[zabbix]
+zabbix ansible_ssh_user=diploma1 ansible_sudo_pass=diploma1  
+
+[elasticsearch]
+elasticsearch
+
+[kibana]
+kibana
+
+[nginx-web:vars]
+ansible_ssh_common_args='-o ProxyCommand="ssh -W %h:%p -q diploma1@46.21.244.219"'
+
+[zabbix:vars]
+ansible_ssh_common_args='-o ProxyCommand="ssh -W %h:%p -q diploma1@46.21.244.219"'
+
+[elasticsearch:vars]
+ansible_ssh_common_args='-o ProxyCommand="ssh -W %h:%p -q diploma1@46.21.244.219"'
+
+[kibana:vars]
+ansible_ssh_common_args='-o ProxyCommand="ssh -W %h:%p -q diploma1@46.21.244.219"'

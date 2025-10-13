@@ -173,7 +173,7 @@ sudo nano ansible.cfg
 
 ---------
 
-## II. Развёртывание инфраструктуры с помощью TERRAFORM.
+## II. Настройки для развёртывания инфраструктуры с помощью TERRAFORM.
 
 ### a) Сайт. Серверы Nginx.
 
@@ -220,7 +220,7 @@ sudo nano ...tf
 1. Создание snapshot дисков всех ВМ. 
 2. Ограничение времени жизни snaphot в неделю. Сами snaphot настраиваются на ежедневное копирование.
 
-- [snapshot.tf](/home/diploma1/sys43-diplom/terraform/snapshot.tf)
+- [snapshot.tf](https://github.com/stimul2520/sys43-diplom/blob/697163b8fc84499b376548a5ec29d4e951159fde/terraform/snapshot.tf)
 
 ### f) Вывод информации в консоль по созданию ВМ.
 
@@ -240,3 +240,67 @@ terraform apply
 ![13](img/13.png)
 ![14](img/14.png)
 ![15](img/15.png)
+
+---------
+
+## IV. Настройки для развёртывания инфраструктуры с помощью ANSIBLE.
+
+Создание и настройка [hosts](/home/diploma1/sys43-diplom/ansible/hosts), [ansible.cfg](/home/diploma1/sys43-diplom/ansible/ansible.cfg).
+
+```python
+cd .ansible/
+sudo nano hosts
+sudo nano ansible.cfg
+```
+
+Проверка доступности хостов:
+```python
+sudo ansible all -m ping --list-hosts
+ansible all -m ping
+```
+![16](img/16.png)
+![17](img/17.png)
+![18](img/18.png)
+
+Создание, запуск ansible-playbooks и сопутствующих конфиг файлов.
+
+- Nginx.
+[ngx1.html](/home/diploma1/sys43-diplom/ansible/ngx1.html)
+[ngx2.html](/home/diploma1/sys43-diplom/ansible/ngx2.html)
+[nginx-playbook.yaml](/home/diploma1/sys43-diplom/ansible/nginx-playbook.yaml)
+
+![19](img/19.png)
+![20](img/20.png)
+
+- Elasticsearch (https://mirror.yandex.ru/mirrors/elastic/7/pool/main/e/elasticsearch/elasticsearch-7.17.1-amd64.deb)
+[elastic-conf.yaml](/home/diploma1/sys43-diplom/ansible/elastic-conf.yaml)
+[elastic-play.yaml](/home/diploma1/sys43-diplom/ansible/elastic-play.yaml)
+
+![21](img/21.png)
+
+- Kibana (https://mirror.yandex.ru/mirrors/elastic/7/pool/main/k/kibana/kibana-7.17.1-amd64.deb)
+[kibana.j2](/home/diploma1/sys43-diplom/ansible/kibana.j2)
+[kibana-play.yaml](/home/diploma1/sys43-diplom/ansible/kibana-play.yaml)
+
+![22](img/22.png)
+
+- Filebeat (https://mirror.yandex.ru/mirrors/elastic/7/pool/main/f/filebeat/filebeat-7.17.1-amd64.deb)
+[filebeat.j2](/home/diploma1/sys43-diplom/ansible/filebeat.j2)
+[filebeat-play.yaml](/home/diploma1/sys43-diplom/ansible/filebeat-play.yaml)
+
+![23](img/23.png)
+
+- Zabbix. Zabbix-agent.
+[zabbix-playbook.yaml](/home/diploma1/sys43-diplom/ansible/zabbix-playbook.yaml)
+[zabbix-agent-playbook.yaml](/home/diploma1/sys43-diplom/ansible/zabbix-agent-playbook.yaml)
+
+![24](img/24.png)
+![25](img/25.png)
+![26](img/26.png)
+![27](img/27.png)
+
+---------
+
+## V. Проверка и настройка ресурсов.
+
+

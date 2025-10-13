@@ -1,0 +1,25 @@
+---
+- name: 1 install  Elastic
+  hosts: elasticsearch
+  become: yes
+  gather_facts: true
+
+  tasks:
+  - name: Установка elasticsearch
+    apt:
+      deb: "https://mirror.yandex.ru/mirrors/elastic/7/pool/main/e/elasticsearch/elasticsearch-7.17.1-amd64.deb"
+
+  - name: 2 copy elasticsearch
+    copy:
+      src: /home/diploma1/.ansible/elastic-conf.yaml
+      dest: /etc/elasticsearch/elasticsearch.yml
+
+  - name: daemon_reload
+    systemd:
+      daemon_reload: true
+
+  - name: 3 Перезапуск elasticsearch и добавляем в автозагрузку
+    service:
+      name: elasticsearch
+      state: restarted
+      enabled: yes
