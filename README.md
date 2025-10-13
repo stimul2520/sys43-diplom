@@ -305,9 +305,10 @@ ansible all -m ping
 
 ### a) Сайт. Серверы Nginx.
 
-`curl -v <публичный IP балансера>:80`
-`curl -v 158.160.179.54:80`
-
+```python
+curl -v <публичный IP балансера>:80
+curl -v 158.160.179.54:80
+```
 ![30](img/30.png)
 
 `http://158.160.179.54`
@@ -328,9 +329,10 @@ ansible all -m ping
 ![37](img/37.png)
 ![38](img/38.png)
 
-`log:Admin`
-`pass:zabbix`
-
+```python
+log:Admin
+pass:zabbix
+```
 ![39](img/39.png)
 ![40](img/40.png)
 
