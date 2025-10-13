@@ -186,4 +186,49 @@ sudo nano ...tf
 - [main.tf](https://github.com/stimul2520/sys43-diplom/blob/9864edf12f7a3734e85353e614e2acf33bf99433/terraform/main.tf), в котором описывается создание 2 ВМ с nginx.
 - [target.tf](https://github.com/stimul2520/sys43-diplom/blob/9864edf12f7a3734e85353e614e2acf33bf99433/terraform/target.tf), создание целевых групп.
 - [backend.tf](https://github.com/stimul2520/sys43-diplom/blob/a5b983ed773ac9de613d0397b32cf99272b61b19/terraform/backend.tf), группы бэкендов.
+- [router.tf](/home/diploma1/sys43-diplom/terraform/router.tf), HTTP роутер.
+- [balancer.tf](/home/diploma1/sys43-diplom/terraform/balancer.tf), Application Load Balancer.
+
+### b) Мониторинг. Zabbix.
+
+Создание ВМ, развертывание на ней Zabbix. На каждую ВМ установка Zabbix Agent, настройка агентов на отправление метрик в Zabbix.
+
+- [zabbix.tf](/home/diploma1/sys43-diplom/terraform/zabbix.tf)
+
+### с) Логи. Elasticsearch, Kibana.
+
+1. Cоздание ВМ, развертывание на ней Elasticsearch.
+2. Создание ВМ, развертывание на ней Kibana, конфигурация соединение с Elasticsearch.
+
+- [elastic.tf](/home/diploma1/sys43-diplom/terraform/elastic.tf)
+- [kibana.tf](/home/diploma1/sys43-diplom/terraform/kibana.tf)
+
+### d) Сеть.
+
+1. Развертывание одного VPC. 
+2. Сервера web, Elasticsearch помещаются в приватные подсети. 
+3. Сервера Zabbix, Kibana, application load balancer определяются в публичную подсеть.
+4. Настройка Security Groups соответствующих сервисов на входящий трафик только к нужным портам.
+5. Настройка ВМ с публичным адресом, в которой будет открыт только один порт — ssh. Эта вм будет реализовывать концепцию bastion host .
+
+- [network.tf](/home/diploma1/sys43-diplom/terraform/network.tf)
+- [security.tf](/home/diploma1/sys43-diplom/terraform/security.tf)
+- [bastion.tf](/home/diploma1/sys43-diplom/terraform/bastion.tf)
+
+### e) Резервное копирование.
+
+1. Создание snapshot дисков всех ВМ. 
+2. Ограничение времени жизни snaphot в неделю. Сами snaphot настраиваются на ежедневное копирование.
+
+- [snapshot.tf](/home/diploma1/sys43-diplom/terraform/snapshot.tf)
+
+### f) Вывод информации в консоль по созданию ВМ.
+
+- [outputs.tf](/home/diploma1/sys43-diplom/terraform/outputs.tf)
+
+---------
+
+## III. Поднятие облачной инфраструктуры с помощью TERRAFORM.
+
+
 
