@@ -220,7 +220,7 @@ sudo nano ...tf
 1. Создание snapshot дисков всех ВМ. 
 2. Ограничение времени жизни snaphot в неделю. Сами snaphot настраиваются на ежедневное копирование.
 
-- [snapshot.tf](https://github.com/stimul2520/sys43-diplom/blob/c7c91766226b32fe9b269c78dc0fadeb7ebe8bbd/terraform/snapshot.tf)
+- [snapshot.tf](/home/diploma1/sys43-diplom/terraform/snapshot.tf)
 
 ### f) Вывод информации в консоль по созданию ВМ.
 
@@ -230,5 +230,13 @@ sudo nano ...tf
 
 ## III. Поднятие облачной инфраструктуры с помощью TERRAFORM.
 
-
-
+```python
+terraform plan
+terraform apply
+```
+![10](img/10.png)
+![11](img/11.png)
+![12](img/12.png)
+![13](img/13.png)
+![14](img/14.png)
+![15](img/15.png)
