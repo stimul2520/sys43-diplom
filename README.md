@@ -186,22 +186,22 @@ sudo nano ...tf
 - [main.tf](https://github.com/stimul2520/sys43-diplom/blob/9864edf12f7a3734e85353e614e2acf33bf99433/terraform/main.tf), в котором описывается создание 2 ВМ с nginx.
 - [target.tf](https://github.com/stimul2520/sys43-diplom/blob/9864edf12f7a3734e85353e614e2acf33bf99433/terraform/target.tf), создание целевых групп.
 - [backend.tf](https://github.com/stimul2520/sys43-diplom/blob/a5b983ed773ac9de613d0397b32cf99272b61b19/terraform/backend.tf), группы бэкендов.
-- [router.tf](/home/diploma1/sys43-diplom/terraform/router.tf), HTTP роутер.
-- [balancer.tf](/home/diploma1/sys43-diplom/terraform/balancer.tf), Application Load Balancer.
+- [router.tf](https://github.com/stimul2520/sys43-diplom/blob/c7c91766226b32fe9b269c78dc0fadeb7ebe8bbd/terraform/router.tf), HTTP роутер.
+- [balancer.tf](https://github.com/stimul2520/sys43-diplom/blob/c7c91766226b32fe9b269c78dc0fadeb7ebe8bbd/terraform/balancer.tf), Application Load Balancer.
 
 ### b) Мониторинг. Zabbix.
 
 Создание ВМ, развертывание на ней Zabbix. На каждую ВМ установка Zabbix Agent, настройка агентов на отправление метрик в Zabbix.
 
-- [zabbix.tf](/home/diploma1/sys43-diplom/terraform/zabbix.tf)
+- [zabbix.tf](https://github.com/stimul2520/sys43-diplom/blob/c7c91766226b32fe9b269c78dc0fadeb7ebe8bbd/terraform/zabbix.tf)
 
 ### с) Логи. Elasticsearch, Kibana.
 
 1. Cоздание ВМ, развертывание на ней Elasticsearch.
 2. Создание ВМ, развертывание на ней Kibana, конфигурация соединение с Elasticsearch.
 
-- [elastic.tf](/home/diploma1/sys43-diplom/terraform/elastic.tf)
-- [kibana.tf](/home/diploma1/sys43-diplom/terraform/kibana.tf)
+- [elastic.tf](https://github.com/stimul2520/sys43-diplom/blob/c7c91766226b32fe9b269c78dc0fadeb7ebe8bbd/terraform/elastic.tf)
+- [kibana.tf](https://github.com/stimul2520/sys43-diplom/blob/c7c91766226b32fe9b269c78dc0fadeb7ebe8bbd/terraform/kibana.tf)
 
 ### d) Сеть.
 
@@ -211,20 +211,20 @@ sudo nano ...tf
 4. Настройка Security Groups соответствующих сервисов на входящий трафик только к нужным портам.
 5. Настройка ВМ с публичным адресом, в которой будет открыт только один порт — ssh. Эта вм будет реализовывать концепцию bastion host .
 
-- [network.tf](/home/diploma1/sys43-diplom/terraform/network.tf)
-- [security.tf](/home/diploma1/sys43-diplom/terraform/security.tf)
-- [bastion.tf](/home/diploma1/sys43-diplom/terraform/bastion.tf)
+- [network.tf](https://github.com/stimul2520/sys43-diplom/blob/c7c91766226b32fe9b269c78dc0fadeb7ebe8bbd/terraform/network.tf)
+- [security.tf](https://github.com/stimul2520/sys43-diplom/blob/c7c91766226b32fe9b269c78dc0fadeb7ebe8bbd/terraform/security.tf)
+- [bastion.tf](https://github.com/stimul2520/sys43-diplom/blob/c7c91766226b32fe9b269c78dc0fadeb7ebe8bbd/terraform/bastion.tf)
 
 ### e) Резервное копирование.
 
 1. Создание snapshot дисков всех ВМ. 
 2. Ограничение времени жизни snaphot в неделю. Сами snaphot настраиваются на ежедневное копирование.
 
-- [snapshot.tf](/home/diploma1/sys43-diplom/terraform/snapshot.tf)
+- [snapshot.tf](https://github.com/stimul2520/sys43-diplom/blob/c7c91766226b32fe9b269c78dc0fadeb7ebe8bbd/terraform/snapshot.tf)
 
 ### f) Вывод информации в консоль по созданию ВМ.
 
-- [outputs.tf](/home/diploma1/sys43-diplom/terraform/outputs.tf)
+- [outputs.tf](https://github.com/stimul2520/sys43-diplom/blob/c7c91766226b32fe9b269c78dc0fadeb7ebe8bbd/terraform/outputs.tf)
 
 ---------
 
